@@ -6,7 +6,8 @@ export class CompanyAccount extends DioAccount {
     super(name, accountNumber)
   }
 
-  getLoan = (): void => {
-    console.log('Voce pegou um empréstimo')
+  getLoan = (ammount: number): void => {
+    this.deposit(ammount);
+    console.log(`Voce pegou um empréstimo de ${ammount} para a conta ${this.getName()}`)
   }
 }
